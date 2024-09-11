@@ -6,20 +6,172 @@
     <title>Agamotto Security | Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Your existing styles here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        header {
+            width: 100%;
+            padding: 15px 5%;
+            background: linear-gradient(90deg, #1f8feb, #009688);
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #e0f7fa;
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-grow: 1;
+            padding: 0 5%;
+            background: #ffffff;
+            align-items: center;
+            text-align: center;
+        }
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        .hero-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #1f8feb;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+            margin: 0 auto;
+        }
+        .cta-button:hover {
+            background-color: #009688;
+            transform: translateY(-3px);
+        }
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://source.unsplash.com/800x800/?cybersecurity,technology') no-repeat center center;
+            background-size: cover;
+            border-radius: 20px;
+            margin: 40px;
+        }
+        footer {
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: auto;
+        }
+        .section {
+            padding: 60px 5%;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+            .hero-text p {
+                font-size: 1rem;
+            }
+            .hero-image {
+                margin: 20px 0;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-container">
-        <img src="https://agamottosecurity.com/logo.png" alt="Agamotto Security Logo" class="logo">
-        <h1>Agamotto Security</h1>
-    </div>
+    <h1>Agamotto Security</h1>
     <nav>
-        <a href="about.html">About Us</a> <!-- Links to the new About Us page -->
-        <a href="approach.html">Our Approach</a> <!-- Links to the new Our Approach page -->
-        <a href="contact.html">Contact</a> <!-- Links to the new Contact page (if you have one) -->
+        <a href="about.html">About Us</a>
+        <a href="approach.html">Our Approach</a>
+        <a href="contact.html">Contact</a>
     </nav>
 </header>
 
@@ -44,3 +196,4 @@
 
 </body>
 </html>
+
