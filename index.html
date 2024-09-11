@@ -33,7 +33,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex-wrap: wrap; /* Allow the header items to wrap on smaller screens */
+            flex-wrap: wrap;
         }
         .logo-container {
             display: flex;
@@ -70,7 +70,7 @@
             padding: 0 5%;
             background: #ffffff;
             align-items: center;
-            text-align: center; /* Center text on smaller screens */
+            text-align: center;
         }
         .hero-text {
             display: flex;
@@ -103,7 +103,7 @@
             transition: transform 0.3s ease, background-color 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: fit-content;
-            margin: 0 auto; /* Center button */
+            margin: 0 auto;
         }
         .cta-button:hover {
             background-color: #009688;
@@ -127,29 +127,47 @@
             width: 100%;
             margin-top: auto;
         }
+        .approach-section {
+            padding: 60px 5%;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .approach-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .approach-section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        /* Media Query for Mobile Devices */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 align-items: center;
-                text-align: center; /* Center text on mobile */
+                text-align: center;
             }
             .hero {
-                grid-template-columns: 1fr; /* Single column layout on mobile */
+                grid-template-columns: 1fr;
                 padding: 20px;
             }
             .hero-text h2 {
-                font-size: 2rem; /* Smaller heading on mobile */
+                font-size: 2rem;
             }
             .hero-text p {
-                font-size: 1rem; /* Adjust paragraph font size */
+                font-size: 1rem;
             }
             .hero-image {
-                margin: 20px 0; /* Adjust margin for better spacing */
+                margin: 20px 0;
             }
         }
     </style>
@@ -168,7 +186,7 @@
     </nav>
 </header>
 
-<section class="hero">
+<section class="hero" id="about">
     <div class="hero-text">
         <h2>Leading the Future of Managed Security with AI</h2>
         <p>
@@ -181,6 +199,22 @@
         <button class="cta-button">Learn More</button>
     </div>
     <div class="hero-image"></div>
+</section>
+
+<section class="approach-section" id="services">
+    <h2>Our Approach</h2>
+    <p>
+        At Agamotto Security, we believe in building strong partnerships with established Managed Security Service Providers (MSSPs) to redefine the future of cybersecurity. Our customer-first mentality drives us to enhance MSSP offerings by seamlessly integrating advanced AI technologies into existing workflows, delivering a superior and secure experience for our clients.
+    </p>
+    <p>
+        We work closely with MSSPs to understand their unique challenges and customer needs, fostering collaborative relationships that prioritize growth and innovation. By introducing AI-powered automation, we enable MSSPs to elevate their service delivery, focusing on what matters most—protecting their clients' digital environments.
+    </p>
+    <p>
+        Our approach leverages AI to automate routine tasks such as alert triage, ticketing, and research, reducing the workload on security teams and allowing them to concentrate on critical threats. Through intelligent automation, we recommend precise remediation actions directly to security practitioners, streamlining the incident response process and significantly improving the time to resolution.
+    </p>
+    <p>
+        By integrating AI-driven insights, we empower MSSPs to provide a faster, more accurate response to security incidents, enabling their clients to maintain a more secure workplace. This approach not only reduces the potential for human error but also ensures that threats are addressed swiftly and effectively, creating a safer environment for all.
+    </p>
 </section>
 
 <footer>
