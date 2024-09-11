@@ -17,8 +17,8 @@
             min-height: 100vh;
             margin: 0;
             font-family: 'Roboto', sans-serif;
-            background-color: #f5f5f5; /* Light background color */
-            color: #333; /* Darker text color for readability */
+            background-color: #f5f5f5;
+            color: #333;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -55,22 +55,42 @@
         header nav a:hover {
             color: #e0f7fa;
         }
-        .section {
-            padding: 60px 5%;
+        footer {
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #ffffff;
+            text-align: center;
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: auto;
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-grow: 1;
+            padding: 0 5%;
+            background: #ffffff;
+            align-items: center;
             text-align: center;
         }
-        .section h2 {
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        .hero-text h2 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             color: #333;
         }
-        .section p {
+        .hero-text p {
             font-size: 1.1rem;
             line-height: 1.6;
+            margin-bottom: 30px;
             color: #555;
-            max-width: 800px;
-            margin: 0 auto;
         }
         .cta-button {
             padding: 15px 30px;
@@ -84,20 +104,43 @@
             transition: transform 0.3s ease, background-color 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             width: fit-content;
-            margin: 30px auto;
+            margin: 0 auto;
         }
         .cta-button:hover {
             background-color: #009688;
             transform: translateY(-3px);
         }
-        footer {
-            padding: 20px;
-            background-color: #1f1f1f;
-            color: #ffffff;
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://source.unsplash.com/800x800/?cybersecurity,technology') no-repeat center center;
+            background-size: cover;
+            border-radius: 20px;
+            margin: 40px;
+        }
+        .section {
+            padding: 60px 5%;
+            background-color: #ffffff;
             text-align: center;
-            font-size: 0.9rem;
-            width: 100%;
-            margin-top: auto;
+        }
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @media (max-width: 768px) {
             header {
@@ -121,16 +164,19 @@
     </nav>
 </header>
 
-<section class="section">
-    <h2>Leading the Future of Managed Security with AI</h2>
-    <p>
-        At Agamotto Security, we specialize in acquiring and transforming Managed Security Service Providers (MSSPs). 
-        Utilizing advanced AI technologies, we automate and enhance MSSP operations, driving unparalleled efficiency and growth.
-    </p>
-    <p>
-        Join us as we redefine the cybersecurity landscape, ensuring our MSSP partners thrive in a rapidly evolving digital world.
-    </p>
-    <button class="cta-button">Learn More</button>
+<section class="hero">
+    <div class="hero-text">
+        <h2>Leading the Future of Managed Security with AI</h2>
+        <p>
+            At Agamotto Security, we specialize in acquiring and transforming Managed Security Service Providers (MSSPs). 
+            Utilizing advanced AI technologies, we automate and enhance MSSP operations, driving unparalleled efficiency and growth.
+        </p>
+        <p>
+            Join us as we redefine the cybersecurity landscape, ensuring our MSSP partners thrive in a rapidly evolving digital world.
+        </p>
+        <button class="cta-button">Learn More</button>
+    </div>
+    <div class="hero-image"></div>
 </section>
 
 <footer>
