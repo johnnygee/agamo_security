@@ -55,14 +55,43 @@
         header nav a:hover {
             color: #e0f7fa;
         }
-        footer {
-            padding: 20px;
-            background-color: #1f1f1f;
-            color: #ffffff;
+        .mesh-background {
+            background-image: url('path/to/your/digital_mesh_network_image.png'); /* Replace with actual file path */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 5%;
             text-align: center;
-            font-size: 0.9rem;
-            width: 100%;
-            margin-top: auto;
+        }
+        .mesh-background h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .mesh-background p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #1f8feb;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: fit-content;
+            margin: 30px auto;
+        }
+        .cta-button:hover {
+            background-color: #009688;
+            transform: translateY(-3px);
         }
         .hero {
             display: grid;
@@ -92,24 +121,6 @@
             margin-bottom: 30px;
             color: #555;
         }
-        .cta-button {
-            padding: 15px 30px;
-            background-color: #1f8feb;
-            color: #ffffff;
-            text-transform: uppercase;
-            font-weight: 700;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: fit-content;
-            margin: 0 auto;
-        }
-        .cta-button:hover {
-            background-color: #009688;
-            transform: translateY(-3px);
-        }
         .hero-image {
             display: flex;
             align-items: center;
@@ -119,24 +130,14 @@
             border-radius: 20px;
             margin: 40px;
         }
-        .section {
-            padding: 60px 5%;
-            background-color: #ffffff;
+        footer {
+            padding: 20px;
+            background-color: #1f1f1f;
+            color: #ffffff;
             text-align: center;
-        }
-        .section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .section p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto 20px;
+            font-size: 0.9rem;
+            width: 100%;
+            margin-top: auto;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -177,6 +178,13 @@
         <button class="cta-button">Learn More</button>
     </div>
     <div class="hero-image"></div>
+</section>
+
+<section class="mesh-background">
+    <h2>Innovative AI-Driven Security Solutions</h2>
+    <p>
+        Our approach integrates state-of-the-art AI technologies and automation to deliver the best security outcomes. With a commitment to innovation and a customer-first mentality, Agamotto Security enhances MSSP operations, making them more efficient, responsive, and resilient against evolving threats.
+    </p>
 </section>
 
 <footer>
